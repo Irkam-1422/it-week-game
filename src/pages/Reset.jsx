@@ -35,7 +35,6 @@ export const Reset = ({returnSuccess}) => {
     setChecking(true);
       setTimeout(() => {
         if (/^\d+$/.test(temp.join(''))) {
-            console.log(temp);
           returnSuccess(temp.join(''))
         } else {
           if (message.current) {

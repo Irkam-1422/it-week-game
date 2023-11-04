@@ -1,3 +1,6 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "../media-queries.scss";
+
 .home-cont {
   background: #06142e;
   width: 100vw;
@@ -77,6 +80,10 @@
       margin-top: 5px;
     }
 
+    div {
+      text-align: initial;
+    }
+
     .close {
       background: #782b2b;
       color: #e05c5c;
@@ -107,5 +114,23 @@
     gap: 10px;
     color: #f5efd782;
     cursor: pointer;
+  }
+
+  @include media-breakpoint-down(md) {
+    h1 {
+      font-size: 30px;
+      margin-bottom: 2rem;  
+    }
+    .inputs-cont {
+      gap: .5rem;
+      input {
+        width: 40px;
+        font-size: 33px;
+        line-height: 50px;
+      }
+    }
+    .message-cont {
+      width: 80vw;
+    }
   }
 }

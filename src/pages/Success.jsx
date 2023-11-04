@@ -8,36 +8,11 @@ export const Success = ({messageContent}) => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    console.log(message);
     if (message.current) {
       message.current.style.display = "flex";
       message.current.style.top = "70vh";
     }
   }, [message]);
-
-  // useEffect(() => {
-  //   if (isSignedIn) {
-  //     document.addEventListener('keydown', (event) => {
-  //       var name = event.key;
-  //       var code = event.code;
-
-  //       if (code == 'Space') {
-  //         vMsg = ''
-  //       } else {
-  //         addVmsg(name)
-  //       }
-  //     });
-  //   }
-  // },[isSignedIn])
-
-  // const addVmsg = (key) => {
-  //   vMsg = vMsg + key
-    
-  //   if (vMsg === 'virus') {
-  //     console.log('should return');
-  //     returnVirus()
-  //   }
-  // }
 
   const closeMessage = () => {
     if (message.current) {
@@ -48,7 +23,7 @@ export const Success = ({messageContent}) => {
 
   return (
     <div className="success-cont">
-      <h1>Добро пожаловать!</h1>
+      <h1>Добро <br className="d-block d-md-none"/> пожаловать!</h1>
       <hr />
       <div className="btns">
         <div className="btn" onClick={() => navigate('/reset')}>Переустановить код</div>

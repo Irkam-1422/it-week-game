@@ -78,7 +78,7 @@ export const Home = ({returnSuccess, info}) => {
       </div>
       <div className="message-cont" ref={message}>
         <img src={errorIcon} alt="" />
-        <div className="">Неверный код. В доступе отказано.</div>
+        <div className="">Неверный код. <br className="d-block d-md-none"/> В доступе отказано.</div>
         <div className="close" onClick={closeMessage}>
             <div className="">x</div>
         </div>

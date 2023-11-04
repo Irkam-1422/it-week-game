@@ -60,7 +60,7 @@ export const Admin = ({returnSuccess, info}) => {
 
   return (
     <div className="home-cont">
-      <h1 style={{fontSize: '30px', textTransform: 'none'}}>Для изменения кода доступа <br /> введите пароль администратора:</h1>
+      <h1 style={{fontSize: window.innerWidth < 768 ? '20px' : '30px', textTransform: 'none'}}>Для изменения кода доступа <br /> введите пароль администратора:</h1>
       <div className="inputs-cont">
         {array.map((a, i) => (
           <input

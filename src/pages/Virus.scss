@@ -1,3 +1,6 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "../media-queries.scss";
+
 @-webkit-keyframes rotating /* Safari and Chrome */ {
   from {
     -webkit-transform: rotate(0deg);
@@ -58,4 +61,14 @@
       -o-animation: rotating 25s linear infinite;
       animation: rotating 25s linear infinite;
     }
+
+  @include media-breakpoint-down(md) {
+    .virus-inner {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+  }
 }

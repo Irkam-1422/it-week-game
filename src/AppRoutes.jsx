@@ -19,7 +19,6 @@ export const AppRoutes = () => {
   useEffect(() => {
     const getInfoFromDb = async () => {
       const info = await getInfo();
-      console.log(info);
       setInfo(info);
 
       setVirus(info.virus)
@@ -42,24 +41,18 @@ export const AppRoutes = () => {
 
   const addVmsg = (key) => {
     vMsg = vMsg + key
-    console.log(vMsg, isSignedIn);
 
     if (vMsg === 'virus' && isSignedIn) {
-      console.log(vMsg);
-      console.log('should return');
       handleVirusReturn(true)
     }
     if (vMsg === 'antivirus') {
-      console.log('should return');
       handleVirusReturn(false)
       setMessage( (<pre>Система восстановлена.<br />Вирус ликвидирован</pre>) );
     }
   }
 
   const handleUpdateCode = async (str) => {
-    console.log(str);
     const updated = await updateCode(str);
-    console.log(updated);
     if (updated) {
       setMessage( ( <pre>Код успешно обновлён.</pre> ) );
       navigate("/");
@@ -67,9 +60,7 @@ export const AppRoutes = () => {
   };
 
   const handleVirusReturn = async (bol) => {
-    console.log('handleVirusReturn');
     const updated = await updateVirus(bol);
-    console.log(updated);
     setVirus(updated)
     navigate("/");
   }
