@@ -7,7 +7,7 @@ export const Virus = () => {
   return (
     <div className="virus-cont">
       <div className="virus-inner">
-        <img src={virus} className="rotating" />
+        <img src={virus} className="rotating" alt=""/>
         <h1>
           Система недоступна. <br /> Обнаружен вирус.
         </h1>

@@ -31,7 +31,7 @@ export const AppRoutes = () => {
         var name = event.key;
         var code = event.code;
 
-        if (code == 'Space') {
+        if (code === 'Space') {
           vMsg = ''
         } else {
           addVmsg(name)
